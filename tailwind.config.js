@@ -14,10 +14,10 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          DEFAULT: '#003366', // Navy Blue (HR Cargo Primary)
+          DEFAULT: '#073b68', // HR Cargo Primary Blue
           foreground: 'var(--primary-foreground)',
-          dark: '#002147',
-          light: '#0055AA',
+          dark: '#052a4d',
+          light: '#0b508c',
         },
         secondary: {
           DEFAULT: 'var(--secondary)',
@@ -32,10 +32,10 @@ module.exports = {
           foreground: 'var(--muted-foreground)',
         },
         accent: {
-          DEFAULT: '#F37021', // Vibrant Orange (HR Cargo Accent)
+          DEFAULT: '#a4c639', // HR Cargo Accent Lime/Yellow
           foreground: 'var(--accent-foreground)',
-          dark: '#D65E10',
-          light: '#FF8C00',
+          dark: '#8ba831',
+          light: '#b8d64c',
         },
         popover: {
           DEFAULT: 'var(--popover)',
