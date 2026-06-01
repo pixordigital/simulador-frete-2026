@@ -170,9 +170,11 @@ export default function FreightSimulator() {
                 <h2 className="text-2xl font-black text-foreground tracking-tight">Cálculo de Frete</h2>
                 <p className="text-slate-500 text-xs font-medium">Defina os parâmetros operacionais e fiscais para obter a cotação final.</p>
               </div>
-              <Badge variant={results.isCompliant ? "default" : "destructive"}
+              <Badge variant="outline"
                        className={`px-4 py-1.5 text-xs font-black uppercase tracking-widest transition-all ${
-                         results.isCompliant ? 'bg-accent text-primary-dark hover:bg-accent/90 border border-accent/20' : 'animate-pulse'
+                         results.isCompliant
+                           ? 'bg-emerald-100 text-emerald-700 border-emerald-200 hover:bg-emerald-200'
+                           : 'bg-red-100 text-red-700 border-red-200 animate-pulse hover:bg-red-200'
                        }`}>
                 {results.isCompliant ? <CheckCircle2 className="w-3 h-3 mr-2" /> : <AlertCircle className="w-3 h-3 mr-2" />}
                 {results.isCompliant ? 'EM CONFORMIDADE ANTT' : 'ABAIXO DO PISO ANTT'}
