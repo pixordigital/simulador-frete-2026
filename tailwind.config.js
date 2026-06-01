@@ -14,7 +14,7 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          DEFAULT: '#003366', // Navy Blue from HR Cargo identity
+          DEFAULT: '#003366', // Navy Blue (HR Cargo Primary)
           foreground: 'var(--primary-foreground)',
           dark: '#002147',
           light: '#0055AA',
@@ -32,10 +32,10 @@ module.exports = {
           foreground: 'var(--muted-foreground)',
         },
         accent: {
-          DEFAULT: '#64748b', // Professional Slate for accents
+          DEFAULT: '#F37021', // Vibrant Orange (HR Cargo Accent)
           foreground: 'var(--accent-foreground)',
-          dark: '#475569',
-          light: '#94a3b8',
+          dark: '#D65E10',
+          light: '#FF8C00',
         },
         popover: {
           DEFAULT: 'var(--popover)',
