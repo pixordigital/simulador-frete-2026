@@ -32,9 +32,9 @@ module.exports = {
           foreground: 'var(--muted-foreground)',
         },
         accent: {
-          DEFAULT: '#a4c639', // HR Cargo Lime Green
+          DEFAULT: '#f47116', // HR Cargo Branding Orange
           foreground: 'var(--accent-foreground)',
-          highlight: '#f47116', // Branding Orange discovered in CSS
+          highlight: '#df6815', // Darker orange for hover/depth
         },
         popover: {
           DEFAULT: 'var(--popover)',
