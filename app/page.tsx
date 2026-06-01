@@ -77,8 +77,6 @@ export default function FreightSimulator() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-foreground font-sans flex selection:bg-primary/20">
-
-      {/* System Sidebar */}
       <aside className="hidden lg:flex w-64 bg-slate-900 text-white flex-col sticky top-0 h-screen transition-all">
         <div className="p-6">
           <div className="flex items-center gap-3 mb-8">
@@ -87,7 +85,6 @@ export default function FreightSimulator() {
             </div>
             <span className="text-lg font-black uppercase tracking-tighter leading-none">HR Cargo</span>
           </div>
-
           <nav className="space-y-1">
             <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4 px-3">Menu Principal</div>
             {[
@@ -109,7 +106,6 @@ export default function FreightSimulator() {
             ))}
           </nav>
         </div>
-
         <div className="mt-auto p-6 border-t border-slate-800 space-y-1">
           {[
             { icon: Settings, label: 'Configurações' },
@@ -135,9 +131,7 @@ export default function FreightSimulator() {
           </div>
         </div>
       </aside>
-
       <div className="flex-1 flex flex-col h-screen overflow-hidden">
-        {/* App Top-Bar */}
         <header className="h-16 bg-white border-b border-slate-200 px-6 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="lg:hidden w-8 h-8 bg-primary rounded-lg flex items-center justify-center text-white font-black text-sm">
@@ -147,30 +141,24 @@ export default function FreightSimulator() {
               Simulador de Frete <span className="text-primary font-black">2026</span>
             </h1>
           </div>
-
           <div className="flex items-center gap-4">
             <button className="p-2 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-all relative">
               <Bell className="w-4 h-4" />
-              <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white" />
+              <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
             </button>
-            <div className="h-4 w-px bg-slate-200" />
+            <div className="h-4 w-px bg-slate-200"></div>
             <button className="p-2 text-slate-400 hover:text-primary hover:bg-slate-100 rounded-lg transition-all">
               <User className="w-4 h-4" />
             </button>
           </div>
         </header>
-
-        {/* Main Work Area */}
         <main className="flex-1 overflow-y-auto p-6 lg:p-8 bg-slate-50">
           <div className="max-w-6xl mx-auto">
-
-            {/* App Header Section */}
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
               <div>
                 <h2 className="text-2xl font-black text-foreground tracking-tight">Cálculo de Frete</h2>
                 <p className="text-slate-500 text-xs font-medium">Defina os parâmetros operacionais e fiscais para obter a cotação final.</p>
               </div>
-
               <div className={`px-4 py-2 rounded-full flex items-center gap-3 text-xs font-black uppercase tracking-widest transition-all shadow-sm ${
                 results.isCompliant
                   ? 'bg-emerald-100 text-emerald-700 border border-emerald-200'
@@ -180,15 +168,12 @@ export default function FreightSimulator() {
                 {results.isCompliant ? 'EM CONFORMIDADE ANTT' : 'ABAIXO DO PISO ANTT'}
               </div>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Inputs Area */}
               <div className="lg:col-span-2 space-y-6">
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <section className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm transition-all hover:border-primary/30">
                     <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-6 flex items-center gap-2">
-                      <div className="w-1 h-4 bg-primary rounded-full" />
+                      <div className="w-1 h-4 bg-primary rounded-full"></div>
                       Custos Operacionais
                     </h3>
                     <div className="grid grid-cols-1 gap-4">
@@ -197,12 +182,11 @@ export default function FreightSimulator() {
                       <InputField label="Seguro (%)" value={inputs.insurancePercent} onChange={(v) => handleInputChange('insurancePercent', v)} name="insurancePercent" />
                       <InputField label="Overhead (R$)" value={inputs.overhead} onChange={(v) => handleInputChange('overhead', v)} name="overhead" />
                       <InputField label="Outros (R$)" value={inputs.others} onChange={(v) => handleInputChange('others', v)} name="others" />
-                    </div >
+                    </div>
                   </section>
-
                   <section className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm transition-all hover:border-primary/30">
                     <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-6 flex items-center gap-2">
-                      <div className="w-1 h-4 bg-primary rounded-full" />
+                      <div className="w-1 h-4 bg-primary rounded-full"></div>
                       Rota e Logística
                     </h3>
                     <div className="space-y-4">
@@ -210,14 +194,13 @@ export default function FreightSimulator() {
                       <InputField label="Pedágios (R$)" value={inputs.tolls} onChange={(v) => handleInputChange('tolls', v)} name="tolls" />
                       <div className="p-3 bg-slate-50 rounded-lg border border-slate-200 text-[10px] text-slate-500 italic leading-relaxed">
                         Cálculo baseado na Lei 10209/2001. Pedágios são somados ao valor final, fora da base de impostos.
-                      </div >
-                    </div >
+                      </div>
+                    </div>
                   </section>
-                </div >
-
+                </div>
                 <section className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm transition-all hover:border-primary/30">
                   <h3 className="text-xs font-black text-slate-400 uppercase tracking-widest mb-6 flex items-center gap-2">
-                    <div className="w-1 h-4 bg-primary rounded-full" />
+                    <div className="w-1 h-4 bg-primary rounded-full"></div>
                     Parâmetros Fiscais e ANTT
                   </h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -227,38 +210,33 @@ export default function FreightSimulator() {
                     <InputField label="CBS (%)" value={inputs.cbsPercent} onChange={(v) => handleInputChange('cbsPercent', v)} name="cbsPercent" />
                     <InputField label="IBS (%)" value={inputs.ibsPercent} onChange={(v) => handleInputChange('ibsPercent', v)} name="ibsPercent" />
                     <InputField label="Margem Lucro (%)" value={inputs.profitMarginPercent} onChange={(v) => handleInputChange('profitMarginPercent', v)} name="profitMarginPercent" />
-                  </div >
+                  </div>
                 </section>
-              </div >
-
-              {/* Results Section */}
+              </div>
               <div className="space-y-6">
                 <div className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm sticky top-24">
                   <h3 className="text-sm font-black text-foreground mb-6 flex items-center gap-2">
                     <Calculator className="w-4 h-4 text-primary" />
                     Resumo Financeiro
                   </h3>
-
                   <div className="grid grid-cols-1 gap-4">
                     <ResultCard label="Custo Operacional Total" value={results.totalCost} />
                     <ResultCard label="Piso Mínimo ANTT" value={results.anttFloor} />
                     <ResultCard label="Margem de Lucro" value={results.profitTotal} />
                     <ResultCard label="Impostos Totais" value={results.taxTotal} />
-
                     <div className="mt-6 pt-6 border-t border-slate-100">
                       <ResultCard
                         label="Preço Final (com pedágio)"
                         value={results.finalPrice}
                         highlight
                       />
-                    </div >
-                  </div >
-                </div >
-              </div >
-            </div >
-          </div >
-        </div >
-      </main>
-    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   );
 }
