@@ -107,8 +107,8 @@ export default function FreightSimulator() {
           <nav className="space-y-1">
             <div className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-4 px-3">Menu Principal</div>
             {[
-              { icon: LayoutDashboard, label: 'Dashboard', active: true },
-              { icon: Calculator, label: 'Simulador', active: false },
+              { icon: LayoutDashboard, label: 'Dashboard', active: false },
+              { icon: Calculator, label: 'Simulador', active: true },
               { icon: History, label: 'Histórico', active: false },
               { icon: FileText, label: 'Relatórios', active: false },
             ].map((item) => (
