@@ -57,7 +57,7 @@ const ResultCard = ({ label, value, isCurrency = true, highlight = false }: {
   highlight?: boolean;
 }) => (
   <Card className={`transition-all duration-300 ${highlight
-    ? 'bg-primary text-primary-foreground shadow-lg ring-1 ring-white/20'
+    ? 'bg-primary text-primary-foreground shadow-lg ring-2 ring-accent'
     : 'bg-white hover:border-primary/50'}`}>
     <CardContent className="p-4">
       <span className={`text-[10px] block mb-1 uppercase tracking-widest font-bold ${highlight ? 'text-primary-foreground/70' : 'text-slate-400'}`}>
@@ -99,7 +99,7 @@ export default function FreightSimulator() {
       <aside className="hidden lg:flex w-64 bg-slate-900 text-white flex-col sticky top-0 h-screen transition-all">
         <div className="p-6">
           <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/30">
+            <div className="w-10 h-10 bg-accent rounded-xl flex items-center justify-center text-primary-dark font-black text-xl shadow-lg shadow-accent/30">
               HR
             </div>
             <span className="text-lg font-black uppercase tracking-tighter leading-none">HR Cargo</span>
@@ -116,7 +116,7 @@ export default function FreightSimulator() {
                 key={item.label}
                 href="#"
                 className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-                  item.active ? 'bg-primary text-white shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'
+                  item.active ? 'bg-accent text-primary-dark shadow-md' : 'text-slate-400 hover:text-white hover:bg-slate-800'
                 }`}
               >
                 <item.icon className="w-4 h-4" />
@@ -172,7 +172,7 @@ export default function FreightSimulator() {
               </div>
               <Badge variant={results.isCompliant ? "default" : "destructive"}
                        className={`px-4 py-1.5 text-xs font-black uppercase tracking-widest transition-all ${
-                         results.isCompliant ? 'bg-emerald-100 text-emerald-700 hover:bg-emerald-100 border border-emerald-200' : 'animate-pulse'
+                         results.isCompliant ? 'bg-accent text-primary-dark hover:bg-accent/90 border border-accent/20' : 'animate-pulse'
                        }`}>
                 {results.isCompliant ? <CheckCircle2 className="w-3 h-3 mr-2" /> : <AlertCircle className="w-3 h-3 mr-2" />}
                 {results.isCompliant ? 'EM CONFORMIDADE ANTT' : 'ABAIXO DO PISO ANTT'}

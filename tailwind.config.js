@@ -14,13 +14,13 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         primary: {
-          DEFAULT: '#073b68', // HR Cargo Primary Blue
+          DEFAULT: '#073b68', // HR Cargo Navy Blue
           foreground: 'var(--primary-foreground)',
-          dark: '#052a4d',
           light: '#0b508c',
+          dark: '#0f1221',
         },
         secondary: {
-          DEFAULT: 'var(--secondary)',
+          DEFAULT: '#0b508c',
           foreground: 'var(--secondary-foreground)',
         },
         destructive: {
@@ -32,10 +32,9 @@ module.exports = {
           foreground: 'var(--muted-foreground)',
         },
         accent: {
-          DEFAULT: '#a4c639', // HR Cargo Accent Lime/Yellow
+          DEFAULT: '#a4c639', // HR Cargo Lime Green
           foreground: 'var(--accent-foreground)',
-          dark: '#8ba831',
-          light: '#b8d64c',
+          highlight: '#f47116', // Branding Orange discovered in CSS
         },
         popover: {
           DEFAULT: 'var(--popover)',
@@ -45,6 +44,11 @@ module.exports = {
           DEFAULT: 'var(--card)',
           foreground: 'var(--card-foreground)',
         },
+        brand: {
+          cream: '#ffe9d9',
+          deepDark: '#0c0211',
+          slateBlue: '#252a3e',
+        }
       },
     },
   },
