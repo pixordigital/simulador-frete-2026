@@ -1,5 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   title: 'Simulador de Frete 2026',
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className={cn("font-sans")}>
       <body>{children}</body>
     </html>
   );

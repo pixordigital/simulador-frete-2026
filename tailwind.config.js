@@ -8,18 +8,43 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         primary: {
-          DEFAULT: '#004A99', // Professional Blue
-          dark: '#003366',
-          light: '#3377CC',
+          DEFAULT: '#003366', // Navy Blue from HR Cargo identity
+          foreground: 'var(--primary-foreground)',
+          dark: '#002147',
+          light: '#0055AA',
+        },
+        secondary: {
+          DEFAULT: 'var(--secondary)',
+          foreground: 'var(--secondary-foreground)',
+        },
+        destructive: {
+          DEFAULT: 'var(--destructive)',
+          foreground: 'var(--destructive-foreground)',
+        },
+        muted: {
+          DEFAULT: 'var(--muted)',
+          foreground: 'var(--muted-foreground)',
         },
         accent: {
-          DEFAULT: '#FF8C00', // Energetic Orange
-          dark: '#E67E00',
-          light: '#FFA500',
+          DEFAULT: '#64748b', // Professional Slate for accents
+          foreground: 'var(--accent-foreground)',
+          dark: '#475569',
+          light: '#94a3b8',
         },
-        background: '#F8FAFC',
-        foreground: '#1E293B',
+        popover: {
+          DEFAULT: 'var(--popover)',
+          foreground: 'var(--popover-foreground)',
+        },
+        card: {
+          DEFAULT: 'var(--card)',
+          foreground: 'var(--card-foreground)',
+        },
       },
     },
   },
